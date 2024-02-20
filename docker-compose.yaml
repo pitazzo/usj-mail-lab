@@ -1,0 +1,13 @@
+services:
+  smtp:
+    container_name: my-smtp
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USERS: "example_user:example_password"
+        MY_HOSTNAME: "my-smtp.local"
+        FRIENDS: "my-friends-smtp.local smtp:[192.168.X.Y]:1025"
+    ports:
+      - "1025:25"
+      - "1110:110"
