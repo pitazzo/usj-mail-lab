@@ -1,10 +1,10 @@
-# SMTP & FTP Lab 👨🏻‍🔬
+# SMTP Lab 👨🏻‍🔬
 
 This lab is part of the course **Networks & Communications 2** of **Universidad San Jorge** of Zaragoza. All contents are original.
 
 ## Intro
 
-The objective of this lab is to play at a low level with the SMTP and FTP protocols to see and "believe" that the principles covered in the theoretical classes of the course are real and functional. There are certain parts of the lab that may not work depending on the system they are executed on, as the behavior of local networks is highly dependent on the specific system. In this case, the important thing is to understand why what is failing is failing, document it in the deliverable, and if there is no obvious solution, continue working with a peer.
+The objective of this lab is to play at a low level with the SMTP protocol to see and "believe" that the principles covered in the theoretical classes of the course are real and functional. There are certain parts of the lab that may not work depending on the system they are executed on, as the behavior of local networks is highly dependent on the specific system. In this case, the important thing is to understand why what is failing is failing, document it in the deliverable, and if there is no obvious solution, continue working with a peer.
 
 ### Delivery
 
@@ -108,20 +108,3 @@ For testing purposes, telnet is very visual and gives it a whole 1971 vintage fe
    1. Was it received?
    2. What differences do you see in the email headers?
    3. Why can Thunderbird, a modern and serious client, interoperate without any problems with a basic setup like the one we have running in the Docker container?
-
-## FTP
-
-Now, let's quickly dive into FTP. This time, instead of setting up our own local server, we'll use one hosted in the cloud. Our objective here is straightforward: upload a file and then download it again.
-
-1. For the initial upload, we'll use [FileZilla](https://filezilla-project.org), the de-facto standard FTP client. Install the version appropriate for your OS.
-2. Connect to the public server we'll be using for this FTP lab: the username will be `dlpuser` with the password `rNrKYTX9g7z3RgJRmxWuGHbeu`. The server operates on `ftp.dlptest.com`. Enter the parameters and click **Quick Connection**.
-3. Explore, navigate the server's directories, and watch the FTP commands being executed in the FileZilla console. Then, create a simple text file on your local system and upload it to a specific path on the server. Remember this path.
-4. Open a new command line session and connect to the FTP server using telnet, i.e., `telnet ftp.dlptest.com 21`. We'll interact with the server similarly to how we did with the local SMTP server. This telnet session will serve as our control connection.
-5. Authenticate yourself with the `USER` and `PASS` commands and navigate to the path of the file you uploaded using `PWD` and `CWD`.
-6. Request the server to set up a data connection by issuing the `PASV` command. The server will respond with the IP address to which we should connect our data connection.
-7. Open a new shell session and connect using telnet to the specific IP address and port provided by our previous `PASV` command, e.g., `telnet 44.121.114.78 1923`.
-8. In the original telnet session, issue the `RETR <file_name>` command to download the file.
-9. Answer these questions:
-   1. What just happened in the data connection? Attach a screenshot of the entire telnet interaction.
-   2. Why did we use the `PASV` command instead of the `PORT` command to open the data connection?
-   3. Would this have worked if the file wasn't a text file? Try it.
