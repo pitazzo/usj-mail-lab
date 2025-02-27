@@ -33,7 +33,7 @@ Docker support for Windows is limited and unstable. Therefore, it is recommended
 When using WSL, packet capturing with Wireshark is less straightforward. Therefore, it is recommended to send commands via Telnet using, for example, Putty from the host machine.
 For the sections related to sending emails between machines, it is crucial to disable all firewalls.
 
-IMPORTANT: Remember to re-enable them after completing the lab.
+*⚠️ Note*: Remember to re-enable them after completing the lab.
 
 ## Preliminary steps
 
