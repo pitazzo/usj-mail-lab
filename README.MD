@@ -23,12 +23,12 @@ To complete the lab, it is necessary to:
 
 ### Note for Windows users
 Docker support for Windows is limited and unstable. Therefore, it is recommended to avoid using this operating system for this lab whenever possible. If this is not feasible, always use WSL and its integration with Docker. WSL emulates a Linux subsystem within Windows, making it much easier to run the lab. To install it:
-	1.	Open a PowerShell terminal and run `wsl --install`.
-	2.	Once the installation is complete, start a terminal session by selecting Ubuntu. In older Windows versions, you may need to search for it in the search bar, while in newer versions, you can open a new tab from the command prompt app and select “Ubuntu” from the dropdown menu.
-	3.	On the first launch, you will be prompted to create an account. Choose a username and a password (by default, the password will not appear on the screen).
-	4.	In Docker Desktop, go to Settings (gear icon) > Resources > WSL Integration and check the box for Ubuntu. Save the changes.
-	5.	In the WSL terminal, verify that the docker command is recognized.
-	6.	You can clone this repository from the WSL terminal using `git clone git@github.com:pitazzo/usj-mail-lab.git` and continue with the lab as usual.
+1. Open a PowerShell terminal and run `wsl --install`.
+2. Once the installation is complete, start a terminal session by selecting Ubuntu. In older Windows versions, you may need to search for it in the search bar, while in newer versions, you can open a new tab from the command prompt app and select “Ubuntu” from the dropdown menu.
+3. On the first launch, you will be prompted to create an account. Choose a username and a password (by default, the password will not appear on the screen).
+4. In Docker Desktop, go to Settings (gear icon) > Resources > WSL Integration and check the box for Ubuntu. Save the changes.
+5. In the WSL terminal, verify that the docker command is recognized.
+6. You can clone this repository from the WSL terminal using `git clone git@github.com:pitazzo/usj-mail-lab.git` and continue with the lab as usual.
 
 When using WSL, packet capturing with Wireshark is less straightforward. Therefore, it is recommended to send commands via Telnet using, for example, Putty from the host machine.
 For the sections related to sending emails between machines, it is crucial to disable all firewalls.
