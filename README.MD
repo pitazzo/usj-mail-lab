@@ -21,6 +21,20 @@ To complete the lab, it is necessary to:
 - Have access to some type of command line system where the `telnet` package is available.
 - Have access to a local area network in which firewalls do not apply nor exist partitions, that is, in which all participants can `ping` each other's machines.
 
+### Note for Windows users
+Docker support for Windows is limited and unstable. Therefore, it is recommended to avoid using this operating system for this lab whenever possible. If this is not feasible, always use WSL and its integration with Docker. WSL emulates a Linux subsystem within Windows, making it much easier to run the lab. To install it:
+	1.	Open a PowerShell terminal and run `wsl --install`.
+	2.	Once the installation is complete, start a terminal session by selecting Ubuntu. In older Windows versions, you may need to search for it in the search bar, while in newer versions, you can open a new tab from the command prompt app and select “Ubuntu” from the dropdown menu.
+	3.	On the first launch, you will be prompted to create an account. Choose a username and a password (by default, the password will not appear on the screen).
+	4.	In Docker Desktop, go to Settings (gear icon) > Resources > WSL Integration and check the box for Ubuntu. Save the changes.
+	5.	In the WSL terminal, verify that the docker command is recognized.
+	6.	You can clone this repository from the WSL terminal using `git clone git@github.com:pitazzo/usj-mail-lab.git` and continue with the lab as usual.
+
+When using WSL, packet capturing with Wireshark is less straightforward. Therefore, it is recommended to send commands via Telnet using, for example, Putty from the host machine.
+For the sections related to sending emails between machines, it is crucial to disable all firewalls.
+
+IMPORTANT: Remember to re-enable them after completing the lab.
+
 ## Preliminary steps
 
 1. Determine which are your loopback and local area network adapters you are connected to, as well as your private IP address. Take note of everything.
